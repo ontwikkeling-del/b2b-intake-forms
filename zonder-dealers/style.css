@@ -1,0 +1,437 @@
+/* ============================
+   ZWARTE KRAAI - B2B Intake Form
+   Gebaseerd op CRM Training stijl
+   ============================ */
+
+:root {
+    --black: #0a0a0a;
+    --dark: #111111;
+    --dark-surface: #1a1a1a;
+    --dark-card: #222222;
+    --dark-border: #333333;
+    --white: #ffffff;
+    --gray-100: #f5f5f5;
+    --gray-300: #d4d4d4;
+    --gray-400: #a3a3a3;
+    --gray-500: #737373;
+    --purple-400: #a78bfa;
+    --purple-500: #8b5cf6;
+    --purple-600: #7c3aed;
+    --purple-700: #6d28d9;
+    --purple-900: #4c1d95;
+    --green-500: #10b981;
+    --green-400: #34d399;
+    --red-400: #f87171;
+    --red-500: #ef4444;
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100vh;
+    font-family: var(--font);
+    background: var(--black);
+    color: var(--gray-100);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Container ---- */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+    min-height: 100vh;
+}
+
+/* ---- Progress Bar ---- */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--dark-surface);
+    z-index: 100;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--purple-600), var(--purple-400));
+    transition: width 0.4s ease;
+    width: 0%;
+}
+
+/* ---- Header ---- */
+.form-header {
+    text-align: center;
+    margin-bottom: 48px;
+    padding-top: 20px;
+}
+
+.header-logo {
+    height: 80px;
+    width: auto;
+    margin-bottom: 24px;
+    filter: invert(1);
+}
+
+.form-header h1 {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.form-header h1 .accent {
+    background: linear-gradient(135deg, var(--purple-400), var(--purple-600));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: var(--gray-400);
+    font-weight: 300;
+}
+
+/* ---- Info Banner ---- */
+.info-banner {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(124, 58, 237, 0.05));
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+}
+
+.info-icon {
+    font-size: 24px;
+    color: var(--purple-400);
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.info-text strong {
+    display: block;
+    font-size: 15px;
+    color: var(--gray-100);
+    margin-bottom: 6px;
+}
+
+.info-text p {
+    font-size: 14px;
+    color: var(--gray-400);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ---- Form ---- */
+.intake-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* ---- Form Section ---- */
+.form-section {
+    background: var(--dark-surface);
+    border: 1px solid var(--dark-border);
+    border-radius: 16px;
+    padding: 28px;
+    transition: var(--transition);
+}
+
+.form-section:hover {
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+.form-section.optional {
+    opacity: 0.85;
+}
+
+.form-section.optional:hover {
+    opacity: 1;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.section-number {
+    font-size: 32px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.06);
+    line-height: 1;
+}
+
+.section-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gray-100);
+    margin: 0;
+}
+
+.section-note {
+    font-size: 12px;
+    color: var(--gray-500);
+    font-weight: 500;
+}
+
+.section-badge {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--purple-400);
+    margin-left: auto;
+}
+
+/* ---- Form Groups ---- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-300);
+    margin-bottom: 8px;
+}
+
+.required {
+    color: var(--purple-400);
+}
+
+.hint {
+    display: block;
+    font-size: 11px;
+    color: var(--gray-500);
+    margin-top: 6px;
+}
+
+/* ---- Form Rows ---- */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-row.thirds {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* ---- Inputs ---- */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-family: var(--font);
+    color: var(--gray-100);
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--gray-500);
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--purple-500);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+input:hover,
+textarea:hover {
+    border-color: var(--gray-400);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* ---- Form Actions ---- */
+.form-actions {
+    text-align: center;
+    padding-top: 16px;
+}
+
+.submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: var(--font);
+    color: var(--white);
+    background: linear-gradient(135deg, var(--purple-600), var(--purple-700));
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.privacy-note {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-top: 16px;
+    line-height: 1.5;
+}
+
+/* ---- Success Message ---- */
+.success-message {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background: linear-gradient(135deg, var(--green-500), var(--green-400));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--white);
+}
+
+.success-message h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.success-message p {
+    font-size: 16px;
+    color: var(--gray-400);
+    margin-bottom: 32px;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--purple-400);
+    border: 1px solid var(--purple-500);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.back-link:hover {
+    background: var(--purple-600);
+    color: var(--white);
+    border-color: var(--purple-600);
+}
+
+/* ---- Footer ---- */
+.form-footer {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--dark-border);
+    font-size: 13px;
+    color: var(--gray-500);
+}
+
+.form-footer .divider {
+    margin: 0 12px;
+    opacity: 0.5;
+}
+
+/* ---- Error States ---- */
+input.error,
+textarea.error {
+    border-color: var(--red-400);
+}
+
+.error-message {
+    color: var(--red-400);
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+    .form-container {
+        padding: 20px 16px 40px;
+    }
+
+    .form-header h1 {
+        font-size: 32px;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+
+    .section-header h2 {
+        font-size: 18px;
+    }
+
+    .form-row,
+    .form-row.thirds {
+        grid-template-columns: 1fr;
+    }
+
+    .section-badge {
+        margin-left: 0;
+        margin-top: 8px;
+        width: fit-content;
+    }
+
+    .header-logo {
+        height: 60px;
+    }
+}

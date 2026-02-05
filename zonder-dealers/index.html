@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2B Data Intake - Zwarte Kraai</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <!-- Progress bar -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <!-- Header -->
+        <div class="form-header">
+            <img src="https://zwartekraai.nl/assets/logo-zw-CkF28sIi.png" alt="Zwarte Kraai" class="header-logo">
+            <h1>B2B Data <span class="accent">Intake</span></h1>
+            <p class="subtitle">Vul onderstaande gegevens in zodat we een passend voorstel kunnen maken</p>
+        </div>
+
+        <!-- Info banner -->
+        <div class="info-banner">
+            <div class="info-icon">&#9432;</div>
+            <div class="info-text">
+                <strong>Het invullen van dit formulier is volledig optioneel.</strong>
+                <p>Hoe meer informatie je deelt, hoe beter we een adviespresentatie op maat voor je kunnen voorbereiden. Vul gerust alleen in wat je weet.</p>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <form id="intakeForm" class="intake-form">
+            <!-- Section 1: Basis gegevens -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2>Basis B2B Gegevens</h2>
+                </div>
+
+                <div class="form-group">
+                    <label for="bedrijfsnaam">Bedrijfsnaam</label>
+                    <input type="text" id="bedrijfsnaam" name="bedrijfsnaam" placeholder="Uw bedrijfsnaam">
+                </div>
+
+                <div class="form-group">
+                    <label for="contactpersoon">Contactpersoon</label>
+                    <input type="text" id="contactpersoon" name="contactpersoon" placeholder="Naam contactpersoon">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mailadres</label>
+                    <input type="email" id="email" name="email" placeholder="email@bedrijf.nl">
+                </div>
+
+                <div class="form-group">
+                    <label for="ltv">Lifetime Value (LTV) van jullie B2B klanten</label>
+                    <input type="text" id="ltv" name="ltv" placeholder="Bijv. €5.000">
+                    <span class="hint">De gemiddelde totale waarde van een klant over de hele relatie</span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="unieke_klanten_2025">Aantal unieke B2B klanten in 2025</label>
+                        <input type="number" id="unieke_klanten_2025" name="unieke_klanten_2025" placeholder="Bijv. 250">
+                    </div>
+                    <div class="form-group">
+                        <label for="orders_2025">Aantal B2B orders in 2025</label>
+                        <input type="number" id="orders_2025" name="orders_2025" placeholder="Bijv. 1200">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Verdeling bestellingen -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2>Verdeling Bestellingen per Klant</h2>
+                    <span class="section-note">Afgelopen 3 jaar</span>
+                </div>
+
+                <div class="form-row thirds">
+                    <div class="form-group">
+                        <label for="klanten_1_bestelling">Klanten met 1 bestelling</label>
+                        <input type="number" id="klanten_1_bestelling" name="klanten_1_bestelling" placeholder="Aantal">
+                    </div>
+                    <div class="form-group">
+                        <label for="klanten_2_bestellingen">Klanten met 2 bestellingen</label>
+                        <input type="number" id="klanten_2_bestellingen" name="klanten_2_bestellingen" placeholder="Aantal">
+                    </div>
+                    <div class="form-group">
+                        <label for="klanten_3plus_bestellingen">Klanten met 3+ bestellingen</label>
+                        <input type="number" id="klanten_3plus_bestellingen" name="klanten_3plus_bestellingen" placeholder="Aantal">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Omzet -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2>Totale B2B omzet per Jaar</h2>
+                    <span class="section-note">Afgelopen 3 jaar</span>
+                </div>
+
+                <div class="form-row thirds">
+                    <div class="form-group">
+                        <label for="omzet_jaar_1">Omzet 2024</label>
+                        <input type="text" id="omzet_jaar_1" name="omzet_jaar_1" placeholder="€">
+                    </div>
+                    <div class="form-group">
+                        <label for="omzet_jaar_2">Omzet 2025</label>
+                        <input type="text" id="omzet_jaar_2" name="omzet_jaar_2" placeholder="€">
+                    </div>
+                    <div class="form-group">
+                        <label for="omzet_jaar_3">Omzet 2026 (t/m nu)</label>
+                        <input type="text" id="omzet_jaar_3" name="omzet_jaar_3" placeholder="€">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Aanvullend (optioneel) -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2>Aanvullende Informatie</h2>
+                                    </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bestelfrequentie">Gemiddelde bestelfrequentie (per klantsegment)</label>
+                        <input type="text" id="bestelfrequentie" name="bestelfrequentie" placeholder="Bijv. Retail 4x/jaar, Horeca 2x/jaar, Groothandel 12x/jaar">
+                    </div>
+                    <div class="form-group">
+                        <label for="producten_per_bestelling">Gemiddeld aantal producten per bestelling</label>
+                        <input type="number" id="producten_per_bestelling" name="producten_per_bestelling" placeholder="Bijv. 5">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="omzetverdeling_segment">Omzetverdeling per segment/doelgroep</label>
+                    <textarea id="omzetverdeling_segment" name="omzetverdeling_segment" rows="3" placeholder="Bijv. Retail 40%, Horeca 35%, Groothandel 25%"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="verhouding_webshop_direct">Verhouding webshopverkopen vs. directe verkoop (via offertes)</label>
+                    <input type="text" id="verhouding_webshop_direct" name="verhouding_webshop_direct" placeholder="Bijv. 60% webshop, 40% via offertes/sales">
+                </div>
+            </div>
+
+            <!-- Section 5: Systemen -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2>Huidige Systemen</h2>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="crm_systeem">Welk CRM systeem gebruiken jullie?</label>
+                        <select id="crm_systeem" name="crm_systeem" onchange="toggleOtherField('crm')">
+                            <option value="">Selecteer...</option>
+                            <option value="HubSpot">HubSpot</option>
+                            <option value="Salesforce">Salesforce</option>
+                            <option value="Pipedrive">Pipedrive</option>
+                            <option value="Microsoft Dynamics">Microsoft Dynamics</option>
+                            <option value="Zoho CRM">Zoho CRM</option>
+                            <option value="Monday.com">Monday.com</option>
+                            <option value="ActiveCampaign">ActiveCampaign</option>
+                            <option value="Excel/Spreadsheets">Excel / Spreadsheets</option>
+                            <option value="Overig">Overig</option>
+                            <option value="Geen">Geen CRM</option>
+                        </select>
+                        <input type="text" id="crm_systeem_overig" name="crm_systeem_overig" placeholder="Naam van jullie CRM systeem" style="display: none; margin-top: 10px;">
+                    </div>
+                    <div class="form-group">
+                        <label for="boekhoudsysteem">Welk boekhoudsysteem gebruiken jullie?</label>
+                        <select id="boekhoudsysteem" name="boekhoudsysteem" onchange="toggleOtherField('boekhoud')">
+                            <option value="">Selecteer...</option>
+                            <option value="Exact Online">Exact Online</option>
+                            <option value="Twinfield">Twinfield</option>
+                            <option value="Moneybird">Moneybird</option>
+                            <option value="Visma e-Boekhouden">Visma e-Boekhouden</option>
+                            <option value="AFAS">AFAS</option>
+                            <option value="Snelstart">Snelstart</option>
+                            <option value="Yuki">Yuki</option>
+                            <option value="Accountview">Accountview</option>
+                            <option value="Unit4">Unit4</option>
+                            <option value="SAP">SAP</option>
+                            <option value="Excel/Spreadsheets">Excel / Spreadsheets</option>
+                            <option value="Overig">Overig</option>
+                            <option value="Geen">Geen boekhoudsysteem</option>
+                        </select>
+                        <input type="text" id="boekhoudsysteem_overig" name="boekhoudsysteem_overig" placeholder="Naam van jullie boekhoudsysteem" style="display: none; margin-top: 10px;">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="doorlooptijd_offerte">Gemiddelde doorlooptijd van offerte tot akkoord</label>
+                    <input type="text" id="doorlooptijd_offerte" name="doorlooptijd_offerte" placeholder="Bijv. 2 weken">
+                </div>
+
+                <div class="form-group">
+                    <label for="overige_systemen">Overige systemen die jullie gebruiken</label>
+                    <textarea id="overige_systemen" name="overige_systemen" rows="4" placeholder="Bijv. Klaviyo (e-mail marketing), WooCommerce (webshop), Mailchimp, Lightspeed, Shopify, Picqer (warehouse), Sendcloud (verzending), Teamleader, Asana, Slack..."></textarea>
+                    <span class="hint">Denk aan: webshop platform, e-mail marketing, warehouse/fulfillment, verzending, projectmanagement, communicatie, etc.</span>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-actions">
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="btn-text">Verstuur gegevens</span>
+                    <span class="btn-loading" style="display: none;">Verzenden...</span>
+                </button>
+                <p class="privacy-note">Uw gegevens worden vertrouwelijk behandeld en alleen gebruikt voor het opstellen van een passend voorstel.</p>
+            </div>
+        </form>
+
+        <!-- Success message -->
+        <div class="success-message" id="successMessage" style="display: none;">
+            <div class="success-icon">&#10003;</div>
+            <h2>Bedankt voor uw aanvraag!</h2>
+            <p>We hebben uw gegevens ontvangen en nemen zo snel mogelijk contact met u op.</p>
+            <a href="https://zwartekraai.nl" class="back-link">Terug naar zwartekraai.nl</a>
+        </div>
+
+        <!-- Footer -->
+        <div class="form-footer">
+            <span>Zwarte Kraai</span>
+            <span class="divider">|</span>
+            <span>zwartekraai.nl</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
