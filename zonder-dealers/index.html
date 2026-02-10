@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B2B Data Intake - Zwarte Kraai</title>
+    <title>B2B Vragenlijst - Zwarte Kraai</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
@@ -17,7 +17,7 @@
         <!-- Header -->
         <div class="form-header">
             <img src="https://zwartekraai.nl/assets/logo-zw-CkF28sIi.png" alt="Zwarte Kraai" class="header-logo">
-            <h1>B2B Data <span class="accent">Intake</span></h1>
+            <h1>B2B <span class="accent">Vragenlijst</span></h1>
             <p class="subtitle">Vul onderstaande gegevens in zodat we een passend voorstel kunnen maken</p>
         </div>
 
@@ -72,87 +72,10 @@
                 </div>
             </div>
 
-            <!-- Section 2: Verdeling bestellingen -->
+            <!-- Section 2: Systemen -->
             <div class="form-section">
                 <div class="section-header">
                     <span class="section-number">02</span>
-                    <h2>Verdeling Bestellingen per Klant</h2>
-                    <span class="section-note">Afgelopen 3 jaar</span>
-                </div>
-
-                <div class="form-row thirds">
-                    <div class="form-group">
-                        <label for="klanten_1_bestelling">Klanten met 1 bestelling</label>
-                        <input type="number" id="klanten_1_bestelling" name="klanten_1_bestelling" placeholder="Aantal">
-                    </div>
-                    <div class="form-group">
-                        <label for="klanten_2_bestellingen">Klanten met 2 bestellingen</label>
-                        <input type="number" id="klanten_2_bestellingen" name="klanten_2_bestellingen" placeholder="Aantal">
-                    </div>
-                    <div class="form-group">
-                        <label for="klanten_3plus_bestellingen">Klanten met 3+ bestellingen</label>
-                        <input type="number" id="klanten_3plus_bestellingen" name="klanten_3plus_bestellingen" placeholder="Aantal">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Section 3: Omzet -->
-            <div class="form-section">
-                <div class="section-header">
-                    <span class="section-number">03</span>
-                    <h2>Totale B2B omzet per Jaar</h2>
-                    <span class="section-note">Afgelopen 3 jaar</span>
-                </div>
-
-                <div class="form-row thirds">
-                    <div class="form-group">
-                        <label for="omzet_jaar_1">Omzet 2024</label>
-                        <input type="text" id="omzet_jaar_1" name="omzet_jaar_1" placeholder="€">
-                    </div>
-                    <div class="form-group">
-                        <label for="omzet_jaar_2">Omzet 2025</label>
-                        <input type="text" id="omzet_jaar_2" name="omzet_jaar_2" placeholder="€">
-                    </div>
-                    <div class="form-group">
-                        <label for="omzet_jaar_3">Omzet 2026 (t/m nu)</label>
-                        <input type="text" id="omzet_jaar_3" name="omzet_jaar_3" placeholder="€">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Section 4: Aanvullend (optioneel) -->
-            <div class="form-section">
-                <div class="section-header">
-                    <span class="section-number">04</span>
-                    <h2>Aanvullende Informatie</h2>
-                                    </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="bestelfrequentie">Gemiddelde bestelfrequentie (per klantsegment)</label>
-                        <input type="text" id="bestelfrequentie" name="bestelfrequentie" placeholder="Bijv. Retail 4x/jaar, Horeca 2x/jaar, Groothandel 12x/jaar">
-                    </div>
-                    <div class="form-group">
-                        <label for="producten_per_bestelling">Gemiddeld aantal producten per bestelling</label>
-                        <input type="number" id="producten_per_bestelling" name="producten_per_bestelling" placeholder="Bijv. 5">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="omzetverdeling_segment">Omzetverdeling per segment/doelgroep</label>
-                    <textarea id="omzetverdeling_segment" name="omzetverdeling_segment" rows="3" placeholder="Bijv. Retail 40%, Horeca 35%, Groothandel 25%"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="verhouding_webshop_direct">Verhouding webshopverkopen vs. directe verkoop (via offertes)</label>
-                    <input type="text" id="verhouding_webshop_direct" name="verhouding_webshop_direct" placeholder="Bijv. 60% webshop, 40% via offertes/sales">
-                </div>
-            </div>
-
-            <!-- Section 5: Systemen -->
-            <div class="form-section">
-                <div class="section-header">
-                    <span class="section-number">05</span>
                     <h2>Huidige Systemen</h2>
                 </div>
 
@@ -205,6 +128,83 @@
                     <label for="overige_systemen">Overige systemen die jullie gebruiken</label>
                     <textarea id="overige_systemen" name="overige_systemen" rows="4" placeholder="Bijv. Klaviyo (e-mail marketing), WooCommerce (webshop), Mailchimp, Lightspeed, Shopify, Picqer (warehouse), Sendcloud (verzending), Teamleader, Asana, Slack..."></textarea>
                     <span class="hint">Denk aan: webshop platform, e-mail marketing, warehouse/fulfillment, verzending, projectmanagement, communicatie, etc.</span>
+                </div>
+            </div>
+
+            <!-- Section 3: Omzet -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2>Totale B2B omzet per Jaar</h2>
+                    <span class="section-note">Afgelopen 3 jaar</span>
+                </div>
+
+                <div class="form-row thirds">
+                    <div class="form-group">
+                        <label for="omzet_jaar_1">Omzet 2024</label>
+                        <input type="text" id="omzet_jaar_1" name="omzet_jaar_1" placeholder="€">
+                    </div>
+                    <div class="form-group">
+                        <label for="omzet_jaar_2">Omzet 2025</label>
+                        <input type="text" id="omzet_jaar_2" name="omzet_jaar_2" placeholder="€">
+                    </div>
+                    <div class="form-group">
+                        <label for="omzet_jaar_3">Omzet 2026 (t/m nu)</label>
+                        <input type="text" id="omzet_jaar_3" name="omzet_jaar_3" placeholder="€">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Verdeling bestellingen -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2>Verdeling Bestellingen per Klant</h2>
+                    <span class="section-note">Afgelopen 3 jaar</span>
+                </div>
+
+                <div class="form-row thirds">
+                    <div class="form-group">
+                        <label for="klanten_1_bestelling">Klanten met 1 bestelling</label>
+                        <input type="number" id="klanten_1_bestelling" name="klanten_1_bestelling" placeholder="Aantal">
+                    </div>
+                    <div class="form-group">
+                        <label for="klanten_2_bestellingen">Klanten met 2 bestellingen</label>
+                        <input type="number" id="klanten_2_bestellingen" name="klanten_2_bestellingen" placeholder="Aantal">
+                    </div>
+                    <div class="form-group">
+                        <label for="klanten_3plus_bestellingen">Klanten met 3+ bestellingen</label>
+                        <input type="number" id="klanten_3plus_bestellingen" name="klanten_3plus_bestellingen" placeholder="Aantal">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Aanvullend (optioneel) -->
+            <div class="form-section">
+                <div class="section-header">
+                    <span class="section-number">05</span>
+                    <h2>Aanvullende Informatie</h2>
+                                    </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bestelfrequentie">Gemiddelde bestelfrequentie (per klantsegment)</label>
+                        <input type="text" id="bestelfrequentie" name="bestelfrequentie" placeholder="Bijv. Retail 4x/jaar, Horeca 2x/jaar, Groothandel 12x/jaar">
+                    </div>
+                    <div class="form-group">
+                        <label for="producten_per_bestelling">Gemiddeld aantal producten per bestelling</label>
+                        <input type="number" id="producten_per_bestelling" name="producten_per_bestelling" placeholder="Bijv. 5">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="omzetverdeling_segment">Omzetverdeling per segment/doelgroep</label>
+                    <textarea id="omzetverdeling_segment" name="omzetverdeling_segment" rows="3" placeholder="Bijv. Retail 40%, Horeca 35%, Groothandel 25%"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="verhouding_webshop_direct">Verhouding webshopverkopen vs. directe verkoop (via offertes)</label>
+                    <input type="text" id="verhouding_webshop_direct" name="verhouding_webshop_direct" placeholder="Bijv. 60% webshop, 40% via offertes/sales">
                 </div>
             </div>
 
